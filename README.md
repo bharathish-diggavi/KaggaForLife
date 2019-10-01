@@ -1,7 +1,7 @@
 # KaggaForLife
  Mankutimmana kagga application
 
-##mankutimmana Kagga
+## Mankutimmana Kagga
  Mankuthimmana Kagga, written by Dr. D. V. Gundappa and published in 1943, is one of the best known of the major literary works in Kannada. It is widely regarded as a masterpiece of Kannada literature and is referred to as the Bhagavad Gita in Kannada
  
   This application was developed just for practice of web application development
