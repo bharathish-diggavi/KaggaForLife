@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="utf-8">
+<title>Manku Timmana Kagga</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<link th:href="@{/css/bootstrap-responsive.css}" rel="stylesheet">
+<link th:href="@{/css/style.css}" rel="stylesheet">
+<link th:href="@{/color/default.css}" rel="stylesheet">
+<link rel="shortcut icon" th:href="@{/img/kagga-logo.png}">
+<!-- =======================================================
+    Theme Name: Maxim
+    Theme URL: https://bootstrapmade.com/maxim-free-onepage-bootstrap-theme/
+    Author: BootstrapMade.com
+    Author URL: https://bootstrapmade.com
+	======================================================= -->
+</head>
+
+<body>
+	<!-- navbar -->
+	<div class="navbar-wrapper">
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<!-- Responsive navbar -->
+					<!-- <a class="btn btn-navbar" data-toggle="collapse"
+						data-target=".nav-collapse"><span class="icon-bar"></span><span
+						class="icon-bar"></span><span class="icon-bar"></span> </a> -->
+					<h1 class="brand">
+						<a th:href="@{/}">KaggaForLife</a>
+					</h1>
+					<!-- navigation -->
+					<!-- <nav class="pull-right nav-collapse collapse">
+						<ul id="menu-main" class="nav">
+							<li><a title="team" href="#about">About</a></li>
+							<li><a title="blog" href="#blog">Blog</a></li>
+							<li><a title="contact" href="#contact">Contact</a></li>
+						</ul>
+					</nav> -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- section: team -->
+	<section id="about" class="section">
+		<div class="container">
+			<h4>ಮಂಕುತಿಮ್ಮನ ಕಗ್ಗ</h4>
+			<div class="row">
+				<div class="span4 offset1">
+					<div>
+						<p th:text="${kagga.kagga_kn}"></p>
+					</div>
+				</div>
+				<div class="span6 offset1">
+					<div>
+						<p th:text="${kagga.kagga_eng}"></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /.container -->
+	</section>
+	<!-- end section: team -->
+
+	<!-- section: blog -->
+	<section id="blog" class="section"
+		style="padding-top: 0px; padding-bottom: 20px;">
+		<div class="container">
+			<div class="blankdivider30"></div>
+			<div class="aligncenter">
+				<a th:href="@{/}" class="btn btn-large btn-theme">Back to Home</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- end spacer section -->
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="span6 offset3">
+					<p class="copyright">&copy; Maxim Theme. All rights reserved.
+					<div class="credits">
+						<!--
+                All the links in the footer should remain intact.
+                You can delete the links only if you purchased the pro version.
+                Licensing information: https://bootstrapmade.com/license/
+                Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Maxim
+              -->
+						Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+					</div>
+					</p>
+				</div>
+			</div>
+		</div>
+		<!-- ./container -->
+	</footer>
+	<a href="#" class="scrollup"><i
+		class="icon-angle-up icon-square icon-bgdark icon-2x"></i></a>
+	<script th:src="@{/js/jquery.js}"></script>
+	<script th:src="@{/js/jquery.scrollTo.js}"></script>
+	<script th:src="@{/js/jquery.nav.js}"></script>
+	<script th:src="@{/js/jquery.localScroll.js}"></script>
+	<script th:src="@{/js/bootstrap.js}"></script>
+	<script th:src="@{/js/jquery.prettyPhoto.js}"></script>
+	<script th:src="@{/js/isotope.js}"></script>
+	<script th:src="@{/js/jquery.flexslider.js}"></script>
+	<script th:src="@{/js/inview.js}"></script>
+	<script th:src="@{/js/animate.js}"></script>
+	<script th:src="@{/js/custom.js}"></script>
+	<script th:src="@{/contactform/contactform.js}"></script>
+
+</body>
+
+</html>

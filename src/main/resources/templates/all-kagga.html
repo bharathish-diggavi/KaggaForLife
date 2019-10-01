@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="utf-8">
+<title>Manku Timmana Kagga</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<link th:href="@{/css/bootstrap-responsive.css}" rel="stylesheet">
+<link th:href="@{/css/animate.css}" rel="stylesheet">
+<link th:href="@{/css/style.css}" rel="stylesheet">
+<link th:href="@{/color/default.css}" rel="stylesheet">
+<link rel="shortcut icon" th:href="@{/img/kagga-logo.png}">
+<!-- =======================================================
+    Theme Name: Maxim
+    Theme URL: https://bootstrapmade.com/maxim-free-onepage-bootstrap-theme/
+    Author: BootstrapMade.com
+    Author URL: https://bootstrapmade.com
+	======================================================= -->
+</head>
+
+<body>
+	<!-- navbar -->
+	<div class="navbar-wrapper">
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<!-- Responsive navbar -->
+					<!-- <a class="btn btn-navbar" data-toggle="collapse"
+						data-target=".nav-collapse"><span class="icon-bar"></span><span
+						class="icon-bar"></span><span class="icon-bar"></span> </a> -->
+					<h1 class="brand">
+						<a th:href="@{/}">KaggaForLife</a>
+					</h1>
+					<!-- navigation -->
+					<!-- <nav class="pull-right nav-collapse collapse">
+						<ul id="menu-main" class="nav">
+							<li><a title="team" href="#about">About</a></li>
+							<li><a title="blog" href="#blog">Blog</a></li>
+							<li><a title="contact" href="#contact">Contact</a></li>
+						</ul>
+					</nav> -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- section: blog -->
+	<section id="blog" class="section">
+		<div class="container">
+			<h4>All Kagga</h4>
+			<input type="text" id="search-kagga" placeholder="Search for kagga"
+				onkeyup="myFunction()" title="Type in a word of kagga" name="search"
+				data-search>
+			<!-- Three columns -->
+			<div class="row">
+				<ul id="all-kagga">
+					<li th:each="kagga : ${kaggas}" style="list-style-type: none;">
+						<div class="span4">
+							<div class="home-post">
+								<span id="trans" hidden="true" th:text="${kagga.kagga_latn}"></span>
+								<div class="post-image">
+									<pre style="min-height: 150px;">
+								<strong><span th:text="${kagga.kagga_kn}"></span></strong>
+							</pre>
+								</div>
+								<div class="post-meta">
+									<a th:href="@{/kagga/} + ${kagga.kagga_id}" class="more">Read
+										more</a>
+								</div>
+							</div>
+							<hr>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="blankdivider30"></div>
+			<div class="aligncenter">
+				<a th:href="@{/}" class="btn btn-large btn-theme">Back To Home</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- end spacer section -->
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="span6 offset3">
+					<p class="copyright">&copy; Maxim Theme. All rights reserved.
+					<div class="credits">
+						<!--
+                All the links in the footer should remain intact.
+                You can delete the links only if you purchased the pro version.
+                Licensing information: https://bootstrapmade.com/license/
+                Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Maxim
+              -->
+						Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- ./container -->
+	</footer>
+	<a href="#" class="scrollup"><i
+		class="icon-angle-up icon-square icon-bgdark icon-2x"></i></a>
+	<script th:src="@{/js/jquery.js}"></script>
+	<script th:src="@{/js/jquery.scrollTo.js}"></script>
+	<script th:src="@{/js/jquery.nav.js}"></script>
+	<script th:src="@{/js/jquery.localScroll.js}"></script>
+	<script th:src="@{/js/bootstrap.js}"></script>
+	<script th:src="@{/js/jquery.prettyPhoto.js}"></script>
+	<script th:src="@{/js/isotope.js}"></script>
+	<script th:src="@{/js/jquery.flexslider.js}"></script>
+	<script th:src="@{/js/inview.js}"></script>
+	<script th:src="@{/js/wow.min.js}"></script>
+	<script th:src="@{/js/custom.js}"></script>
+	<script>
+		/* $(document).ready(function(){
+		  $("#myInput").on("keyup", function() {
+		    var value = $(this).val().toLowerCase();
+		    $(".home-post").filter(function() {
+		      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+		    });
+		  });
+		});  */
+		function myFunction() {
+			var input, filter, ul, li, a, i, txtValue;
+			input = document.getElementById("search-kagga");
+			filter = input.value.toUpperCase();
+			ul = document.getElementById("all-kagga");
+			li = ul.getElementsByTagName("li");
+			for (i = 0; i < li.length; i++) {
+				a = li[i].getElementsByTagName("a")[0];
+				txtValue = li[i].textContent || li[i].innerText;
+				if (txtValue.toUpperCase().indexOf(filter) > -1) {
+					li[i].style.display = "";
+				} else {
+					li[i].style.display = "none";
+				}
+			}
+		}
+	</script>
+</body>
+
+</html>
